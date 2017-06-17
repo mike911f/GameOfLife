@@ -1,3 +1,5 @@
+from random import *
+
 class Game:
 
 	def __init__(self, width, height):
@@ -27,4 +29,10 @@ class Game:
 					if self.get_neighbours_number(line,cell)=3:
 						self.new_state[line][cell] = 1
 
-
+	def rand_state(self):
+		i = -1
+		for line in range(self.height):
+			for cell in range(self.width):
+				i = random.randrange(0,1)
+				self.state[line][cell].append(i)
+			
