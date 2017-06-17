@@ -1,3 +1,6 @@
+from graphics import *
+import random 
+
 def main():
 	win_max = 750
     	win = GraphWin("Game Of Life", win_max, win_max)
