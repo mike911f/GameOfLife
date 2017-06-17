@@ -31,4 +31,9 @@ class Game:
 		win_max = 750
 		win = GraphWin("Game Of Life", win_max, win_max)
 		
-		for self.new_state[line][cell] == 0 :
+		for [line] :
+			for [cell] :
+				
+				if self.new_state[line][cell] == 0 :
+				win.plotPixe(line, cell, color="white")
+		
