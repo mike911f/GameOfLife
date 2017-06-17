@@ -31,3 +31,4 @@ class Game:
 		win_max = 750
 		win = GraphWin("Game Of Life", win_max, win_max)
 		
+		for self.new_state[line][cell] == 0 :
