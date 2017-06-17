@@ -35,5 +35,9 @@ class Game:
 			for [cell] :
 				
 				if self.new_state[line][cell] == 0 :
-				win.plotPixe(line, cell, color="white")
+					win.plotPixel(line, cell, color="white")
+				else :
+					win.plotPixel(line, cell, color="black")
+		win.getMouse()
+		win.close()
 		
