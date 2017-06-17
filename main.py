@@ -17,9 +17,9 @@ def main():
         obj.step()
         for line in range(obj.height):
 			    for cell in range(obj.width):
-				    if obj.state[line][cell] == 0 :
+				    if obj.state[line][cell] == 0:
 				    	win.plotPixel(line, cell, color="white")
-				    else :
+				    else:
 				    	win.plotPixel(line, cell, color="black")
 
     win.getMouse()
