@@ -29,6 +29,8 @@ class Game:
 					if self.get_neighbour(line,cell)=3:
 						self.new_state[line][cell] = 1
 
+		self.state = self.new_state
+
 	def get_neighbour(self, x, y):
 		count = 0
 
