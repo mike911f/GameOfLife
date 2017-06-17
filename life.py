@@ -26,3 +26,8 @@ class Game:
 				# Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 					if self.get_neighbours_number(line,cell)=3:
 						self.new_state[line][cell] = 1
+
+	def draw(self):
+		win_max = 750
+		win = GraphWin("Game Of Life", win_max, win_max)
+		
