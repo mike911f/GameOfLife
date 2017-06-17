@@ -1,3 +1,5 @@
+from graphics import *
+
 class Game:
 
 	def __init__(self, width, height):
