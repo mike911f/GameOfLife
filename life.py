@@ -1,5 +1,3 @@
-from graphics import *
-
 class Game:
 
 	def __init__(self, width, height):
@@ -29,17 +27,4 @@ class Game:
 					if self.get_neighbours_number(line,cell)=3:
 						self.new_state[line][cell] = 1
 
-	def draw(self):
-		win_max = 750
-		win = GraphWin("Game Of Life", win_max, win_max)
-		
-		for [line] :
-			for [cell] :
-				
-				if self.new_state[line][cell] == 0 :
-					win.plotPixel(line, cell, color="white")
-				else :
-					win.plotPixel(line, cell, color="black")
-		win.getMouse()
-		win.close()
-		
+
