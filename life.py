@@ -1,9 +1,11 @@
+from random import *
+
 class Game:
 
 	def __init__(self, width, height):
-		self.width = []
-		self.height = []
-		self.state = []
+		self.width = width
+		self.height = height
+		self.state = [[]*self.height]
 
 	def step(self):
 		self.new_state = [[]*self.height]
@@ -50,3 +52,10 @@ class Game:
 		return count
 
 		
+	def rand_state(self):
+		i = -1
+		for line in range(self.height):
+			for cell in range(self.width):
+				i = random.randrange(0,1)
+				self.state[line][cell].append(i)
+			
