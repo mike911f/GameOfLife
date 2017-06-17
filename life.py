@@ -26,3 +26,27 @@ class Game:
 				# Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 					if self.get_neighbours_number(line,cell)=3:
 						self.new_state[line][cell] = 1
+
+	def get_neighbour(self, x, y):
+		count = 0
+
+		if y > 0 and x > 0 and self.state[y-1][x-1] == 1:
+			count += 1
+		if y > 0 and self.state[y-1][x] == 1:
+			count += 1
+		if y > 0 and x < self.width-1 and self.state[y-1][x+1] == 1:
+			count += 1
+		if x > 0 and self.state[y][x-1] == 1:
+			count += 1
+		if x < self.width-1 and self.state[y][x+1] == 1:
+			count += 1
+		if y < self.height-1 and x > 0 and self.state[y+1][x-1] == 1:
+			count += 1
+		if y < self.height-1 and self.state[y+1][x] == 1:
+			count += 1
+		if y < self.height-1 and x < self.width-1 and self.state[y+1][x+1] == 1:
+			count += 1
+
+		return count
+
+		
